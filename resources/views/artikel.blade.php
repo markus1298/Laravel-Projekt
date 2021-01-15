@@ -7,6 +7,7 @@
         <title>Artikel</title>
     </head>
     <body>
+        @include('nav')
         <h1>Artikel</h1>
         <table border="1">
             <thead>
