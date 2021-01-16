@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends("welcome")
+@section("title","Artikelübersicht")
 
-        <title>Artikel</title>
-    </head>
-    <body>
-        @include('nav')
+@section("content")
+        <div class="container">
         <h1>Artikel</h1>
         <table border="1">
             <thead>
@@ -28,14 +23,6 @@
             @endforeach
             </tbody>
         </table>
-        <br/>    
-        <form action="artikel" method="post">
-            @csrf
-            <label for="artikelname">Artikelname</label>
-            <input type="text" id="artikelname" name="artikelname"/>
-            <label for="preis">Preis</label>
-            <input type="text" id="preis" name="preis"/>
-            <button type="submit">Artikel hinzufügen</button>
-        </form>    
-    </body>
-</html>
+        </div>    
+            
+@endsection

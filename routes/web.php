@@ -26,4 +26,8 @@ Route::get('artikel', [ArtikelController::class, 'getList']);
 
 Route::post('artikel', [ArtikelController::class, 'store']);
 
+Route::get('hinzufügen', function(){
+    return view('hinzufügen');
+});
+
 Route::get('delete/{id}', [ArtikelController::class, 'delete']);

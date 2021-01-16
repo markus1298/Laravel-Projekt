@@ -1,8 +1,8 @@
 <nav>
     <ul>
         <li><a href="/">Startseite</a></li>
-        <li><a href="/artikeluebersicht">Artikelübersicht</a></li>
-        <li><a href="/artikeluebersicht/create">Artikel hinzufügen</a></li>
-        <li><a href="/delete">Artikel löschen</a></li>
+        <li><a href="/artikel">Artikelübersicht</a></li>
+        <li><a href="/hinzufügen">Artikel hinzufügen</a></li>
+        <li><a href="/bearbeiten">Artikel bearbeiten</a></li>
     </ul>
 </nav>

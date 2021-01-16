@@ -20,9 +20,13 @@ class ArtikelController extends Controller
         $artikel->preis = request('preis');
         $artikel->verfügbar = 1;
 
-        $artikel->save();
+        if($artikel->artikelname == null||$artikel->preis == null){
+            return redirect('hinzufügen')->with("alert","Sie müssen alle Felder ausfüllen!");
+        }else{
+            $artikel->save();
 
-        return redirect('artikel');
+            return redirect('artikel');
+        }
     }
 
     function delete($id) {
