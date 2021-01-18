@@ -1,5 +1,5 @@
 @extends("welcome")
-
+@section("title","Artikel-Bearbeiten")
 @section("content")
     <div class="container">
         <form action="/bearbeiten" method="POST">

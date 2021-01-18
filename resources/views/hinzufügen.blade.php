@@ -1,5 +1,5 @@
 @extends("welcome")
-
+@section("title","Hinzufügen")
 @section("content")
     <div class="container">
         <form action="artikel" method="post">
