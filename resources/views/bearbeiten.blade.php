@@ -9,6 +9,10 @@
             <input type="text" id="artikelname" name="artikelname" value="{{$data['artikelname']}}"/>
             <label for="preis">Preis:</label>
             <input type="number" step="0.01" id="preis" name="preis" value="{{$data['preis']}}"/>
+            <label for="hersteller">Hersteller</label>
+            <input type="text" id="hersteller" name="hersteller" value="{{$data['hersteller']}}"/>
+            <label for="beschreibung">Beschreibung</label>
+            <input type="textarea" id="beschreibung" name="beschreibung" value="{{$data['beschreibung']}}"/>
             <button type="submit">Speichern</button>
         </form>
     </div>

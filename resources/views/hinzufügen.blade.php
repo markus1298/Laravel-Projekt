@@ -8,6 +8,10 @@
                 <input type="text" id="artikelname" name="artikelname"/>
                 <label for="preis">Preis</label>
                 <input type="number" step="0.01" id="preis" name="preis"/>
+                <label for="hersteller">Hersteller</label>
+                <input type="text" id="hersteller" name="hersteller"/>
+                <label for="beschreibung">Beschreibung</label>
+                <input type="textarea" id="beschreibung" name="beschreibung"/>
                 <button type="submit">Artikel hinzufügen</button>
         </form>
     </div>

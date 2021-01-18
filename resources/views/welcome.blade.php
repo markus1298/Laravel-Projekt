@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+            background-color: black;
             position: fixed;
             top: 0;
             width: 100%;
@@ -46,7 +46,7 @@
             width: 30%;
             display:block;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid black;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;

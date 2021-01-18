@@ -16,8 +16,10 @@ class CreateArtikelTable extends Migration
         Schema::create('artikel', function (Blueprint $table) {
             $table->id();
             $table->string('artikelname', 100);
-            $table->decimal('preis', $precision = 5, $scale = 2);
-            $table->boolean('verfügbar');
+            $table->decimal('preis', $precision = 8, $scale = 2);
+            $table->string('hersteller');
+            $table->string('beschreibung');
+            
             $table->timestamps();
         });
     }

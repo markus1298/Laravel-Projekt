@@ -18,13 +18,19 @@ class ArtikelController extends Controller
 
         $artikel->artikelname = request('artikelname');
         $artikel->preis = request('preis');
-        $artikel->verfügbar = 1;
+        $artikel->hersteller = request('hersteller');
+        $artikel->beschreibung = request('beschreibung');
 
-        if($artikel->artikelname == null||$artikel->preis == null){
+        if($artikel->artikelname == null||$artikel->preis == null||$artikel->hersteller == null||$artikel->beschreibung == null){
+            
             return redirect('hinzufügen')->with("alert","Sie müssen alle Felder ausfüllen!");
+
+        }elseif($artikel->preis>999999.99){
+            
+            return redirect('hinzufügen')->with("alert","Der Preis darf nicht größer als 999999.99€ sein!");
+
         }else{
             $artikel->save();
-
             return redirect('artikel');
         }
     }
@@ -38,15 +44,22 @@ class ArtikelController extends Controller
 
     public function update(Request $request)
     {
-        $data=Artikel::find($request->id);
-        $data->artikelname=$request->artikelname;
-        $data->preis=$request->preis;
+        $artikel=Artikel::find($request->id);
+        $artikel->artikelname=$request->artikelname;
+        $artikel->preis=$request->preis;
+        $artikel->hersteller = $request->hersteller;
+        $artikel->beschreibung = $request->beschreibung;
         
-        if($data->artikelname == null||$data->preis == null){
-            return redirect("bearbeiten/{$data->id}")->with("alert","Sie müssen alle Felder ausfüllen!");
-        }else{
-            $data->save();
+        if($artikel->artikelname == null||$artikel->preis == null||$artikel->hersteller == null||$artikel->beschreibung == null){
+            
+            return redirect("bearbeiten/{$artikel->id}")->with("alert","Sie müssen alle Felder ausfüllen!");
 
+        }elseif($artikel->preis>999999.99){
+
+            return redirect("bearbeiten/{$artikel->id}")->with("alert","Der Preis darf nicht größer als 999999.99€ sein!");
+
+        }else{
+            $artikel->save();
             return redirect('artikel');
         }
 

@@ -15,7 +15,7 @@ use App\Http\Controllers\ArtikelController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("artikel");
 });
 
 Route::get('/hallowelt', function() {
