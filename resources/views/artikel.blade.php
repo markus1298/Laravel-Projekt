@@ -18,7 +18,8 @@
                 <td>{{$artikel->id}}</td>
                 <td>{{$artikel->artikelname}}</td>
                 <td>{{$artikel->preis}}</td>
-                <td><a href={{"bearbeiten/".$artikel['id']}}>Bearbeiten</a></td>
+                <!--<td><a href={{"bearbeiten/".$artikel['id']}}>Bearbeiten</a></td>-->
+                <td><a href="bearbeiten/{{$artikel->id}}">Bearbeiten</a></td>
                 <td><a href="delete/{{$artikel->id}}" style="text-decoration:none;background-color:#ff0000;color:white;">Löschen</a></td>
             </tr>
             @endforeach

@@ -30,6 +30,7 @@ Route::get('hinzufügen', function(){
     return view('hinzufügen');
 });
 Route::get('bearbeiten/{id}',[ArtikelController::class,'edit']);
+
 Route::post('bearbeiten',[ArtikelController::class,'update']);
 
 Route::get('delete/{id}', [ArtikelController::class, 'delete']);

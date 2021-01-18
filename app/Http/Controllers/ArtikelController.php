@@ -41,8 +41,14 @@ class ArtikelController extends Controller
         $data=Artikel::find($request->id);
         $data->artikelname=$request->artikelname;
         $data->preis=$request->preis;
-        $data->save();
-        return redirect('artikel');
+        
+        if($data->artikelname == null||$data->preis == null){
+            return redirect("bearbeiten/{$data->id}")->with("alert","Sie müssen alle Felder ausfüllen!");
+        }else{
+            $data->save();
+
+            return redirect('artikel');
+        }
 
     }
 
