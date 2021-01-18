@@ -29,6 +29,23 @@ class ArtikelController extends Controller
         }
     }
 
+    public function edit($id)
+    {
+
+       $data= Artikel::find($id);
+       return view('bearbeiten',['data'=>$data]);
+    }
+
+    public function update(Request $request)
+    {
+        $data=Artikel::find($request->id);
+        $data->artikelname=$request->artikelname;
+        $data->preis=$request->preis;
+        $data->save();
+        return redirect('artikel');
+
+    }
+
     function delete($id) {
         $artikel = Artikel::find($id);
         $artikel->delete();

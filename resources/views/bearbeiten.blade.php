@@ -1,0 +1,20 @@
+@extends("welcome")
+
+@section("content")
+    <div class="container">
+        <form action="/bearbeiten" method="POST">
+            @csrf
+            <input type="hidden" name="id" value="{{$data['id']}}">
+            <label for="artikelname">Artikelname:</label>
+            <input type="text" id="artikelname" name="artikelname" value="{{$data['artikelname']}}"/>
+            <label for="preis">Preis:</label>
+            <input type="number" step="0.01" id="preis" name="preis" value="{{$data['preis']}}"/>
+            <button type="submit">Speichern</button>
+        </form>
+    </div>
+    @if (session('alert'))
+        <div class="alert alert-success">
+            {{ session('alert') }}
+        </div>
+    @endif
+@endsection
