@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="de">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,8 +61,8 @@
             cursor: pointer;
             }
 
-            input[type=submit]:hover {
-            background-color: #333;
+            button:hover {
+            background-color: #111;
             }
 
             .container {
