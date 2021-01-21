@@ -7,9 +7,7 @@
         <title>@yield("title")</title>
 
         <style>
-            
-            
-            
+              
             body {
             margin:0;
             }

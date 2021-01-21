@@ -1,4 +1,4 @@
-@extends("welcome")
+@extends("layout")
 @section("title","Artikelübersicht")
 
 @section("content")
@@ -10,6 +10,8 @@
                     <td>ID</td>
                     <td>Artikelname</td>
                     <td>Preis</td>
+                    <td>Hersteller</td>
+                    <td>Beschreibung</td>
                 </tr>
             </thead>
             <tbody>
@@ -18,6 +20,8 @@
                 <td>{{$artikel->id}}</td>
                 <td>{{$artikel->artikelname}}</td>
                 <td>{{$artikel->preis}}</td>
+                <td>{{$artikel->hersteller}}</td>
+                <td>{{$artikel->beschreibung}}</td>
                 <td><a href="bearbeiten/{{$artikel->id}}" style="text-decoration:none;background-color:black;color:white;">Bearbeiten</a></td>
                 <td><a href="delete/{{$artikel->id}}" style="text-decoration:none;background-color:#ff0000;color:white;">Löschen</a></td>
             </tr>
